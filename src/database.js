@@ -1,7 +1,10 @@
+require('dotenv').config();
+const CONNECTION_URL = process.env.DATABASE_CONNECTION_URL;
+const DATABASE_NAME = process.env.DATABASE_NAME;
 const mongoose = require('mongoose')
 
 mongoose
-    .connect('mongodb+srv://atahualpa1970:pruebatecnica01@cluster0.rbsfb.mongodb.net/contactDB', {
+    .connect(CONNECTION_URL+"/"+DATABASE_NAME, {
         useUnifiedTopology: true,
         useNewUrlParser: true,
         useFindAndModify: false
