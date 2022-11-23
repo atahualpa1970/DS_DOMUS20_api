@@ -1,6 +1,7 @@
 require('dotenv').config();
-const CONNECTION_URL = process.env.DATABASE_CONNECTION_URL;
-const DATABASE_NAME = process.env.DATABASE_NAME;
+//const CONNECTION_URL = "mongodb+srv://atahualpa1970:domus20grupo5@cluster0.rbsfb.mongodb.net/?retryWrites=true&w=majority"
+const CONNECTION_URL = "mongodb://localhost:27017"
+const DATABASE_NAME = "domus20";
 const mongoose = require('mongoose')
 
 mongoose

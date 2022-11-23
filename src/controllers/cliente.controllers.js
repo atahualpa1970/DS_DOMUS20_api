@@ -4,6 +4,7 @@ const Cliente = require('../models/clientes')
 
 clienteCtrl.getClientes = async (req, res) => {
   const clientes = await Cliente.find()
+  console.log("CLI_BD: ", clientes)
   res.json(clientes)
 }
 
