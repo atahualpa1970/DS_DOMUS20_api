@@ -23,6 +23,11 @@ reclamoCtrl.updateReclamo = async (req, res) => {
   res.send({ status: "Reclamo modificado" })
 }
 
+reclamoCtrl.updateReclamoByIdClaim = async (req, res) => {
+  await Reclamo.findOneAndUpdate({id: req.params.id}, req.body)
+  res.send({ status: "Reclamo modificado" })
+}
+
 reclamoCtrl.deleteReclamo = async (req, res) => {
   await Reclamo.findByIdAndDelete(req.params.id)
   res.send({ status: "Reclamo eliminado" })

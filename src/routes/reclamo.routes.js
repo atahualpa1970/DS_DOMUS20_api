@@ -11,6 +11,7 @@ router.post('/', reclamoCtrl.createReclamo)
 // ruta /api/reclamos/:id
 router.get('/:id', reclamoCtrl.getReclamo)
 router.put('/:id', reclamoCtrl.updateReclamo)
+router.put('/idClaim/:id', reclamoCtrl.updateReclamoByIdClaim)
 router.delete('/:id', reclamoCtrl.deleteReclamo)
 
 module.exports = router
